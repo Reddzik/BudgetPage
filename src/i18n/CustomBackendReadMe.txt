@@ -1,0 +1,2 @@
+Custom Backend Component was created to change method read from package 'i18next-xhr-backend'.
+Because API i18next need POST as a request method to read our translation, but Backend from 'i18next-xhr-backend' make request with method GET by default (when we don't provide any payload in request).
