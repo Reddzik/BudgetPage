@@ -6,12 +6,10 @@ import { Suspense } from "react";
 import theme from "utils/theme";
 import GlobalStyles from "./index.css";
 
-import { Navigation } from "components";
-import { Wrapper } from "components";
-import { LoadingIndicator } from "components";
+import { Navigation, LoadingIndicator, Wrapper, Button } from "components";
 
 function App() {
-  const { t, i18n } = useTranslation();
+  const { i18n } = useTranslation();
 
   return (
     <>
@@ -24,20 +22,22 @@ function App() {
           ]}
           RightElement={
             <div>
-              <button
+              <Button
+                option="regular"
                 onClick={() => {
                   i18n.changeLanguage("pl");
                 }}
               >
                 PL
-              </button>
-              <button
+              </Button>
+              <Button
+                option="regular"
                 onClick={() => {
                   i18n.changeLanguage("en");
                 }}
               >
                 EN
-              </button>
+              </Button>
             </div>
           }
         />

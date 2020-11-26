@@ -1,10 +1,10 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 
 import PropTypes from "prop-types";
 
 import { Container, List, NavigationWrapper } from "./Navigation.css";
+import { Button } from "components";
 
 const Navigation = ({ items = [], RightElement }) => {
   const { t } = useTranslation();
@@ -15,7 +15,9 @@ const Navigation = ({ items = [], RightElement }) => {
         <List>
           {items.map((item) => (
             <li key={item.link}>
-              <Link to={item.link}>{t(item.content)}</Link>
+              <Button option="inline" to={item.link}>
+                {t(item.content)}
+              </Button>
             </li>
           ))}
         </List>
