@@ -8,12 +8,13 @@ import GlobalStyles from "./index.css";
 
 import { Navigation } from "components";
 import { Wrapper } from "components";
+import { LoadingIndicator } from "components";
 
 function App() {
   const { t, i18n } = useTranslation();
 
   return (
-    <ThemeProvider theme={theme}>
+    <>
       <GlobalStyles />
       <Router>
         <Navigation
@@ -47,15 +48,17 @@ function App() {
           </Switch>
         </Wrapper>
       </Router>
-    </ThemeProvider>
+    </>
   );
 }
 
 function RootApp() {
   return (
-    <Suspense fallback={"Loading..."}>
-      <App />
-    </Suspense>
+    <ThemeProvider theme={theme}>
+      <Suspense fallback={<LoadingIndicator />}>
+        <App />
+      </Suspense>
+    </ThemeProvider>
   );
 }
 
