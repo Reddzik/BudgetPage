@@ -2,7 +2,7 @@ import { ThemeProvider } from "styled-components";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { Suspense } from "react";
-
+import { connect } from "react-redux";
 import theme from "utils/theme";
 import GlobalStyles from "./index.css";
 

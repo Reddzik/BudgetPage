@@ -9,7 +9,7 @@ import {
 const initialState = {
   loadingState: {},
   budget: {},
-  budgetedCategories: [],
+  budgetedTransactions: [],
 };
 
 function budget(state = initialState, action) {

@@ -19,7 +19,7 @@ function common(state = initialState, action) {
         ...state,
         loadingState: {
           ...state.loadingState,
-          [action.type]: true,
+          [action.type]: LOADING_STATES.LOADING,
         },
       };
     case CATEGORIES_GET_SUCCESS:
